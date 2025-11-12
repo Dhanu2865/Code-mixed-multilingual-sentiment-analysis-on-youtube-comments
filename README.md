@@ -64,14 +64,8 @@ This project builds an **end-to-end AI pipeline** that:
 ## 🧮 Weighted Multi-Task Loss  
 
 To balance task importance, the model learns **uncertainty weights**:
+<img width="765" height="163" alt="image" src="https://github.com/user-attachments/assets/78e35f13-1899-483f-8568-087172f505bf" />
 
-\[
-L_{total} = \sum_{t=1}^{T} \frac{1}{2} e^{-s_t} L_t + \frac{1}{2} s_t
-\]
-
-Where:  
-- \( L_t \): loss for task *t*  
-- \( s_t \): learned log variance for task *t*  
 
 🧠 **Intuition:**  
 A task with higher uncertainty (noisier data) contributes less to the total loss.
